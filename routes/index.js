@@ -9,8 +9,8 @@ router.get('/', (req, res) => {
   res.send(`
     <h1>Bienvenido</h1>
     
-    <p>La hora actual es: ${hora}</p><br>
-    <p>${mensaje}</p>
+    <h3>La hora actual es: ${hora}</h3><br>
+    <h4>${mensaje}</h4>
     <a href="/endroute"><button>Entrar</button> /endroute</a>
 
   `);
