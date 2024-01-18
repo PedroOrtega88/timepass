@@ -1,7 +1,19 @@
 
 const validarHora = (req, res, next) => {
-  const horaActual = parseInt(req.horaActual.split(':')[0], 10);
+  const obtenerHoraActual = (horaString) => {
+    let hora = 0;
   
+    
+    if (horaString.length >= 2) {
+      
+      hora = Number(horaString.substring(0, 2));
+    }
+  
+    return hora;
+  };
+  
+  // Uso de la función
+  const horaActual = obtenerHoraActual(req.horaActual);
   if (horaActual >= 12 && horaActual <= 24) {
  
     next();
